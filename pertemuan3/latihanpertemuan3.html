@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input Nilai</title>
+</head>
+<body>
+    <h2>Form Input Nilai</h2>
+    <form action="latihanpertemuan3.php" method="post">
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+
+        <label for="nim">NIM:</label><br>
+        <input type="text" id="nim" name="nim"><br>
+
+        <label for="matakuliah">Matakuliah:</label><br>
+        <input type="text" id="matakuliah" name="matakuliah"><br>
+
+        <label for="kehadiran">Jumlah Kehadiran:</label><br>
+        <input type="text" id="kehadiran" name="kehadiran"><br>
+
+        <label for="tugas">Nilai Tugas:</label><br>
+        <input type="text" id="tugas" name="tugas"><br>
+
+        <label for="uts">Nilai UTS:</label><br>
+        <input type="text" id="uts" name="uts"><br>
+
+        <label for="uas">Nilai UAS:</label><br>
+        <input type="text" id="uas" name="uas"><br>
+
+        <input type="submit" name="submit" value="Proses">
+    </form>
+
+    <!-- Output -->
+    <div id="output" style="display:none;">
+        <h3>Hasil Perhitungan Nilai</h3>
+        <p>Nama: <span id="nama_output"></span></p>
+        <p>NIM: <span id="nim_output"></span></p>
+        <p>Matakuliah: <span id="matakuliah_output"></span></p>
+        <p>Jumlah Kehadiran: <span id="kehadiran_output"></span></p>
+        <p>Nilai Tugas: <span id="tugas_output"></span></p>
+        <p>Nilai UTS: <span id="uts_output"></span></p>
+        <p>Nilai UAS: <span id="uas_output"></span></p>
+        <p>Nilai Akhir: <span id="nilai_akhir_output"></span></p>
+        <p>Grade: <span id="grade_output"></span></p>
+        <p>Keterangan: <span id="keterangan_output"></span></p>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan hasil output setelah tombol "Proses" ditekan
+        function tampilkanOutput() {
+            document.getElementById('output').style.display = 'block';
+            document.getElementById('nama_output').innerText = document.getElementById('nama').value;
+            document.getElementById('nim_output').innerText = document.getElementById('nim').value;
+            document.getElementById('matakuliah_output').innerText = document.getElementById('matakuliah').value;
+            document.getElementById('kehadiran_output').innerText = document.getElementById('kehadiran').value;
+            document.getElementById('tugas_output').innerText = document.getElementById('tugas').value;
+            document.getElementById('uts_output').innerText = document.getElementById('uts').value;
+            document.getElementById('uas_output').innerText = document.getElementById('uas').value;
+        }
+    </script>
+</body>
+</html>
